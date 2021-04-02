@@ -29,11 +29,26 @@ img {
     margin: 1rem 0 0 0;
 }
 
+a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+    background-image: linear-gradient(orange, orange);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: .5s;
+}
+
+a:hover {
+    color: orange;
+    background-size: 100% 1px;
+}
+
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 99vh;
 }
 
 .cards__wrapper {
@@ -99,9 +114,24 @@ img {
 @media only screen and (min-width: 375px) and (max-width: 480px) {
     .wrapper {
         height: auto;
+        margin: 1rem 0;
     }
     .cards__wrapper {
         flex-direction: column;
         width: 90vw;
     }
+    .card:first-child {
+        background-color: hsl(31, 77%, 52%);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    .card:last-child {
+        background-color: hsl(179, 94%, 18%);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
 }
